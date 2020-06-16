@@ -1,0 +1,104 @@
+﻿<Window x:Class="DNDTimerProgram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DNDTimerProgram"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="595.331" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="NatureButt" Content="Nature" HorizontalAlignment="Left" Margin="142,48,0,0" VerticalAlignment="Top" Width="75" Click="NatureButt_Click" Height="20"/>
+        <TextBlock x:Name="Hour" HorizontalAlignment="Left" Margin="440,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="81" Width="247" FontSize="48"><Run Text="00"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="Minut" HorizontalAlignment="Left" Margin="510,18,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" Height="81" Width="247" FontSize="48"/>
+        <TextBlock x:Name="__" HorizontalAlignment="Left" Margin="495,18,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" Height="81" Width="15" FontSize="48"/>
+        <Button x:Name="InnButtonNotCrowd" Content="Inn Not Crowd&#xA;" HorizontalAlignment="Left" Margin="32,90,0,0" VerticalAlignment="Top" Width="91" Height="20" Click="InnButtonNotCrowd_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="32,363,0,0" TextWrapping="Wrap" Text="Day" VerticalAlignment="Top" RenderTransformOrigin="-1.447,4.085" Height="16" Width="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="32,401,0,0" TextWrapping="Wrap" Text="Month" VerticalAlignment="Top" Height="16" Width="37"/>
+        <TextBlock x:Name="DagText" HorizontalAlignment="Left" Margin="104,363,0,0" TextWrapping="Wrap" Text="Dag" VerticalAlignment="Top" RenderTransformOrigin="0.782,-5.532" Height="16" Width="22"/>
+        <TextBlock x:Name="ManedText" HorizontalAlignment="Left" Margin="104,401,0,0" TextWrapping="Wrap" Text="Måned" VerticalAlignment="Top" Height="16" Width="37"/>
+        <TextBox x:Name="AddTimeAmountHour" HorizontalAlignment="Left" Height="23" Margin="440,91,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="50"/>
+        <Button x:Name="AddTimeButton" Content="Add time" HorizontalAlignment="Left" Margin="612,90,0,0" VerticalAlignment="Top" Width="75" Click="AddTimeButton_Click" Height="20"/>
+        <TextBox x:Name="AddTimeAmountMinut" HorizontalAlignment="Left" Height="23" Margin="510,91,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="50"/>
+        <TextBlock x:Name="___Copy" HorizontalAlignment="Left" Margin="495,91,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" Height="23" Width="11" FontSize="16" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.627"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="32,327,0,0" TextWrapping="Wrap" Text="Week day" VerticalAlignment="Top" Height="16" Width="56"/>
+        <TextBlock x:Name="UgeDagTekst" HorizontalAlignment="Left" Margin="104,327,0,0" TextWrapping="Wrap" Text="Dag" VerticalAlignment="Top" RenderTransformOrigin="2.687,-0.313" Height="16" Width="22"/>
+        <Button x:Name="PlayButton" Content="Pause" HorizontalAlignment="Left" Margin="707,91,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2" Height="20"/>
+        <Button Content="Cave" HorizontalAlignment="Left" Margin="240,48,0,0" VerticalAlignment="Top" Width="75" Click="Button_Cave" Height="20"/>
+        <Button x:Name="SaveTimeButton" Content="Save time" HorizontalAlignment="Left" Margin="612,134,0,0" VerticalAlignment="Top" Width="75" Click="SaveTimeButton_Click" Height="20"/>
+        <Button x:Name="LoadTimeButton" Content="Load time" HorizontalAlignment="Left" Margin="707,134,0,0" VerticalAlignment="Top" Width="75" Click="LoadTimeButton_Click" Height="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="32,432,0,0" TextWrapping="Wrap" Text="Year" VerticalAlignment="Top" RenderTransformOrigin="-14.154,7.016" Height="16" Width="12"/>
+        <TextBlock x:Name="YearText" HorizontalAlignment="Left" Margin="104,432,0,0" TextWrapping="Wrap" Text="År" VerticalAlignment="Top" RenderTransformOrigin="-0.845,0.369" Height="16" Width="12"/>
+        <TextBlock HorizontalAlignment="Left" Margin="32,463,0,0" TextWrapping="Wrap" Text="Weather" VerticalAlignment="Top" RenderTransformOrigin="1.931,0.562" Height="16" Width="20"/>
+        <TextBlock x:Name="WeatherText" HorizontalAlignment="Left" Margin="104,463,0,0" TextWrapping="Wrap" Text="Vejr" VerticalAlignment="Top" Height="16" Width="91"/>
+        <TextBox x:Name="TimeMod" HorizontalAlignment="Left" Height="23" Margin="440,135,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.808,0.465"/>
+        <Button Content="Dungeon" HorizontalAlignment="Left" Margin="245,134,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="TownButt" Content="Town" HorizontalAlignment="Left" Margin="143,90,0,0" VerticalAlignment="Top" Width="75" Click="TownButt_Click"/>
+        <Button x:Name="HouseButt" Content="House" HorizontalAlignment="Left" Margin="49,48,0,0" VerticalAlignment="Top" Width="75" Click="HouseButt_Click"/>
+        <Button x:Name="OceanButt" Content="Ocean" HorizontalAlignment="Left" Margin="143,134,0,0" VerticalAlignment="Top" Width="75" Click="OceanButt_Click"/>
+        <Button x:Name="DungeonButt" Content="Dungeon" HorizontalAlignment="Left" Margin="245,134,0,0" VerticalAlignment="Top" Width="75" Click="DungeonButt_Click"/>
+        <Button x:Name="ExtremeCreepyButt" Content="Extreme creepy" HorizontalAlignment="Left" Margin="245,90,0,0" VerticalAlignment="Top" Width="86" Click="ExtremeCreepyButt_Click"/>
+        <Button x:Name="CreepyButt" Content="Creepy" HorizontalAlignment="Left" Margin="245,174,0,0" VerticalAlignment="Top" Width="74" Click="CreepyButt_Click_1"/>
+        <CheckBox x:Name="LampeC" Content="Flashlight" HorizontalAlignment="Left" Margin="434,229,0,0" VerticalAlignment="Top" Checked="LampeC_Checked"/>
+        <CheckBox x:Name="MørkeC" Content="Turn all off" HorizontalAlignment="Left" Margin="434,260,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="LysC" Content="All light on" HorizontalAlignment="Left" Margin="434,292,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="RainC" Content="Force rain" HorizontalAlignment="Left" Margin="539,227,0,0" VerticalAlignment="Top" Checked="RainC_Checked"/>
+        <CheckBox x:Name="NoRainC" Content="No Rain" HorizontalAlignment="Left" Margin="539,259,0,0" VerticalAlignment="Top" Checked="NoRainC_Checked"/>
+        <CheckBox x:Name="SoundC" Content="Sound" HorizontalAlignment="Left" Margin="539,295,0,0" VerticalAlignment="Top" IsChecked="True" Click="SoundC_Click"/>
+        <Button x:Name="InnButtonCrowd" Content="Inn Crowded&#xA;" HorizontalAlignment="Left" Margin="49,134,0,0" VerticalAlignment="Top" Width="74" Height="20" Click="InnButtonCrowd_Click"/>
+        <CheckBox x:Name="RoedC" Content="Red Light" HorizontalAlignment="Left" Margin="434,316,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="OpenWorldBtn" Content="Open world settings" HorizontalAlignment="Left" Margin="304,464,0,0" VerticalAlignment="Top" Width="125" Click="OpenWorldBtn_Click"/>
+        <Button x:Name="OpenLightBtn" Content="Open light settings" HorizontalAlignment="Left" Margin="486,464,0,0" VerticalAlignment="Top" Width="125" Click="OpenLightBtn_Click"/>
+        <Grid x:Name="WorldSettingsGrid" Visibility="Hidden">
+            <Rectangle x:Name="WorldBuildingBG" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="383" Margin="26,149,0,0" Stroke="Black" VerticalAlignment="Top" Width="741" />
+            <Button x:Name="SaveWorldSettings2" Content="Save Settings" HorizontalAlignment="Left" Margin="284,503,0,0" VerticalAlignment="Top" Width="75" Click="SaveWorldSettings2_Click"/>
+            <Button x:Name="CloseWorldBuilding" Content="Close" HorizontalAlignment="Left" Margin="392,503,0,0" VerticalAlignment="Top" Width="75" Click="CloseWorldBuilding_Click"/>
+            <Label Content="Seconds in minut" HorizontalAlignment="Left" Margin="49,209,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.099,0.423"/>
+            <Label Content="Minuts in hour" HorizontalAlignment="Left" Margin="49,242,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.099,0.423"/>
+            <Label Content="Hours in day" HorizontalAlignment="Left" Margin="49,277,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.099,0.423"/>
+            <Label Content="Days in month" HorizontalAlignment="Left" Margin="49,313,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.099,0.423"/>
+            <Label Content="Months in year" HorizontalAlignment="Left" Margin="49,345,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.099,0.423"/>
+            <TextBox HorizontalAlignment="Left" Height="26" Margin="182,209,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="SecInMinutTxt" HorizontalAlignment="Left" Height="26" Margin="182,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="MinInHourTxt" HorizontalAlignment="Left" Height="26" Margin="182,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="HourInDayTxt" HorizontalAlignment="Left" Height="26" Margin="182,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="DayInMonthTxt" HorizontalAlignment="Left" Height="26" Margin="182,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="MonthInYearTxt" HorizontalAlignment="Left" Height="26" Margin="182,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="DayNamesTxt" HorizontalAlignment="Left" Height="26" Margin="182,402,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="573"/>
+            <Label x:Name="Day_names" Content="Day Names" HorizontalAlignment="Left" Margin="47,402,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.099,0.423"/>
+            <Label x:Name="Day_names_Copy" Content="Month names" HorizontalAlignment="Left" Margin="47,433,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.099,0.423"/>
+            <TextBox x:Name="MonthNamesTxt" HorizontalAlignment="Left" Height="26" Margin="182,433,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="573"/>
+            <Label x:Name="Day_names_Copy1" Content="Ex. Monday Friday Sunday" HorizontalAlignment="Left" Margin="182,381,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.099,0.423"/>
+        </Grid>
+        <Grid x:Name="LightSettings" Visibility="Hidden">
+            <Rectangle x:Name="LightSettingsBG" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="383" Margin="26,149,0,0" Stroke="Black" VerticalAlignment="Top" Width="741"/>
+            <TextBlock x:Name="TestText" HorizontalAlignment="Left" Height="136" Margin="54,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247"/>
+            <Button x:Name="LoadLight" Content="Load Light" HorizontalAlignment="Left" Margin="178,169,0,0" VerticalAlignment="Top" Width="75" Click="LoadLight_Click"/>
+            <TextBox x:Name="WantedLights" HorizontalAlignment="Left" Height="61" Margin="393,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" GotFocus="WantedLights_GotFocus" LostFocus="WantedLights_LostFocus"/>
+            <Label Content="Wanted lights" HorizontalAlignment="Left" Margin="393,168,0,0" VerticalAlignment="Top"/>
+            <Label Content="Wanted light for flashlight" HorizontalAlignment="Left" Margin="393,255,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="FlashlightText" HorizontalAlignment="Left" Height="23" Margin="393,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="SaveButton" Content="Save lights" HorizontalAlignment="Left" Margin="518,284,0,0" VerticalAlignment="Top" Width="75" Click="SaveButton_Click"/>
+            <Button Content="Load Bridge(s)" HorizontalAlignment="Left" Margin="54,169,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click"/>
+            <TextBox x:Name="BridgeIpBox" HorizontalAlignment="Left" Height="23" Margin="272,446,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87" Visibility="Hidden"/>
+            <Label x:Name="Wanted_Ip" Content="Wanted IP" HorizontalAlignment="Left" Margin="272,422,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+            <Button x:Name="SaveBridge" Content="Save IP" HorizontalAlignment="Left" Margin="272,475,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden" Click="SaveBridge_Click"/>
+            <Button x:Name="CloseLightBtn" Content="Close" HorizontalAlignment="Left" Margin="347,495,0,0" VerticalAlignment="Top" Width="75" Click="CloseLightBtn_Click"/>
+        </Grid>
+        <Label x:Name="ClickBridgeLabel" Content="Now click the bridge button" HorizontalAlignment="Left" Margin="469,323,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Visibility="Hidden"/>
+        <TextBlock x:Name="BridgeCountdown" Text="10" HorizontalAlignment="Left" Margin="618,395,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Visibility="Hidden"/>
+        <Label Content="Timer modificer" HorizontalAlignment="Left" Margin="486,135,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
